@@ -1,0 +1,75 @@
+# slim-CMS - an easy-to-use content management system
+# Copyright (C) 2004 Daniel Drees
+# For further information visit: http://www.slim-cms.com
+#
+# This program is free software; you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software Foundation;
+# either version 2 of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE. See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place,
+# Suite 330, Boston, MA 02111-1307 USA
+#
+# File Name: en_admin.var
+# $Author: ddrees $
+# $Date: 2004/10/16 19:32:13 $
+# $Revision: 1.1 $
+#
+
+# Texte Adminbereich
+$lang_start="Start";
+$lang_maindata="Main Data";
+$lang_blocks="Blocks";
+$lang_menu="Menu";
+$lang_layout="Layout";
+$lang_logo="Logo";
+$lang_name="Name / Company";
+$lang_title="Titletext";
+$lang_searchengines="Description for searchengines";
+$lang_keywords="Keywords for searchengines";
+$lang_footer="Footer";
+$lang_language="Language";
+$lang_german="German";
+$lang_english="English";
+$lang_save="Save";
+$lang_back="Back";
+$lang_block="Block";
+$lang_headline="Headline";
+$lang_starting_page="Starting Page";
+$lang_category="Category";
+$lang_isolator="Isolator";
+$lang_not_used="not used";
+$lang_create_block="Create block";
+$lang_upload_block="Upload block";
+$lang_file="File";
+$lang_edit="edit";
+$lang_delete_block="Delete block";
+$lang_upload_logo="Upload logo";
+$lang_actual_logo="Actual logo";
+$lang_published="published under the";
+
+# Nachrichten
+$lang_msg_001="Uploaded block: ";
+$lang_msg_002="Logo uploaded";
+$lang_msg_003="Do you really want to delete block?";
+
+# Fehlermeldungen
+$lang_err_001="ERROR 001: Wrong CMS ID!";
+$lang_err_005="ERROR 005: Please define a block as Starting Page!";
+$lang_err_101="ERROR 101: No blockname given!";
+$lang_err_102="ERROR 102: Block exists!";
+$lang_err_103="ERROR 103: Could not create block!";
+$lang_err_104="ERROR 104: Wrong blockname";
+$lang_err_201="ERROR 201: Block still in use - not deleted!";
+$lang_err_202="ERROR 202: Could not delete block";
+$lang_err_301="ERROR 301: No blockname given!";
+$lang_err_302="ERROR 302: Block exists!";
+$lang_err_303="ERROR 303: Could not upload block";
+$lang_err_304="ERROR 304: Only files of type .html valid!";
+$lang_err_401="ERROR 401: No logo given!";
+$lang_err_402="ERROR 402: Could not create logo.gif!";
+$lang_err_403="ERROR 403: Only files of type .gif valid!!";

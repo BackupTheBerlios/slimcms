@@ -1,0 +1,45 @@
+<script type="text/javascript" src="/fckeditor/fckeditor.js"></script>
+<script type="text/javascript">
+  window.onload = function() {
+    var oFCKeditor = new FCKeditor( 'seiteninhalt','95%','400' ) ;
+    oFCKeditor.ReplaceTextarea() ;
+  }
+</script>
+<form name="pflege" method="post" action="###ADMIN_ACTION###">
+<table width="100%" cellspacing="2" cellpadding="2" border="0">
+  <tr>
+   <td class="normal">
+    <h4>###LANG_BLOCK### "###BAUSTEIN###" ###LANG_EDIT###</h4>
+   </td>
+  </tr>
+  <tr>
+   <td align="center">
+<textarea id="seiteninhalt" name="seiteninhalt" cols="75" rows="80">
+###CONTENT###
+</textarea>
+   </td>
+  </tr>
+</table>
+<br>
+<table border="0" cellspacing="2" cellpadding="2" width="100%">
+ <tr>
+  <td align="right" width="300">
+   <input type="submit" value="###LANG_SAVE###" onclick="this.blur()">
+  </td>
+  <td width="200">
+   <input type="hidden" name="aktion" value="content_speichern">
+   <input type="hidden" name="baustein" value="###BAUSTEIN###">
+   <input type="hidden" name="cms_id" value="###CMS_ID###">
+  </td>
+  <td align="left" width="300">
+   <input type="button" value="###LANG_BACK###" onclick="window.location = '/cgi-bin/cms/admin.cgi?aktion=contentpflege_auswahl&cms_id=###CMS_ID###';">
+  </td>
+ </tr>
+ <tr>
+  <td class="fehler" colspan="3">
+  <br>
+  ###FEHLER###
+  </td>
+ </tr>
+</table>
+</form>

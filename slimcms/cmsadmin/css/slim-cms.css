@@ -1,0 +1,92 @@
+body {
+  font-family : Verdana, Arial, Helvetica, sans-serif;
+  font-size : 12px;
+  font-weight: normal;
+  color: #000000;
+  background-color: #f0f0f0;
+}
+
+a:link    { color: #800000; text-decoration: none }
+a:visited { color: #800000; text-decoration: none }
+a:active  { color: #800000; text-decoration: none }
+a:hover   { color: #a5abb9; text-decoration: none }
+
+td.box {
+  background-color: #fdfdfd;
+  border-left: 1px solid #a5abb9;
+  border-right: 1px solid #a5abb9;
+  margin: 0 0 0 135px;
+  width: 758px; /* IE 5.x */
+  voice-family: "\"}\"";
+}
+
+td.menu {
+  width: 25%;
+  background:url(../img/headline.gif) top left repeat-x;
+  border: 1px solid #a5abb9;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #800000;
+  text-align: center;
+}
+
+td.menu_active {
+  width: 25%;
+  background:url(../img/headline_active.gif) top left no-repeat;
+  border: 1px solid #a5abb9;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #800000;
+  text-align: center;
+}
+
+td.normal {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000000;
+}
+
+td.footer {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #800000;
+  text-align: center;
+}
+
+td.fehler {
+  font-family : Verdana, Arial, Helvetica, sans-serif;
+  font-size : 12px;
+  font-weight : bold;
+  color: #ff0000;
+}
+
+h4 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size : 13px;
+  color: #f78600;
+}
+
+hr {
+  border-top: 1px dashed #a5abb9;
+  height: 1px;
+}
+
+/* forms */
+
+input {
+  font-family : Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  background-color: #f0f0f0;
+  color : #800000;
+}
+
+select {
+  font-family : Verdana, Arial, Helvetica, sans-serif;
+  border: 1px solid #000000;
+  padding: 2px;
+  font-size: 11px;
+  background-color: #f0f0f0;
+  color : #800000;
+}

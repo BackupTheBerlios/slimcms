@@ -1,0 +1,75 @@
+# slim-CMS - an easy-to-use content management system
+# Copyright (C) 2004 Daniel Drees
+# For further information visit: http://www.slim-cms.com
+#
+# This program is free software; you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software Foundation;
+# either version 2 of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE. See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place,
+# Suite 330, Boston, MA 02111-1307 USA
+#
+# File Name: de_admin.var
+# $Author: ddrees $
+# $Date: 2004/10/16 19:32:13 $
+# $Revision: 1.1 $
+#
+
+# Texte Adminbereich
+$lang_start="Start";
+$lang_maindata="Stammdaten";
+$lang_blocks="Bausteine";
+$lang_menu="Menu";
+$lang_layout="Layout";
+$lang_logo="Logo";
+$lang_name="Name / Firma";
+$lang_title="Text Titelleiste";
+$lang_searchengines="Beschreibung für Suchmaschinen";
+$lang_keywords="Stichwörter für Suchmaschinen";
+$lang_footer="Fußzeile";
+$lang_language="Sprache";
+$lang_german="Deutsch";
+$lang_english="Englisch";
+$lang_save="Speichern";
+$lang_back="Zurück";
+$lang_block="Baustein";
+$lang_headline="Überschrift";
+$lang_starting_page="Startseite";
+$lang_category="Rubrik";
+$lang_isolator="Trenner";
+$lang_not_used="nicht genutzt";
+$lang_create_block="Baustein erstellen";
+$lang_upload_block="Baustein hochladen";
+$lang_file="Datei";
+$lang_edit="bearbeiten";
+$lang_delete_block="Baustein löschen";
+$lang_upload_logo="Logo hochladen";
+$lang_actual_logo="Aktuelles Logo";
+$lang_published="lizensiert durch die";
+
+# Nachrichten
+$lang_msg_001="Baustein wurde hochgeladen: ";
+$lang_msg_002="Logo wurde hochgeladen";
+$lang_msg_003="Wollen Sie diesen Baustein wirklich löschen?";
+
+# Fehlermeldungen
+$lang_err_001="FEHLER 001: Falsche CMS ID!";
+$lang_err_005="FEHLER 005: Der Startseite muß ein Baustein zugeordnet werden!";
+$lang_err_101="FEHLER 101: Bitte Bausteinnamen angeben!";
+$lang_err_102="FEHLER 102: Baustein ist bereits vorhanden!";
+$lang_err_103="FEHLER 103: Baustein konnte nicht erstellt werden!";
+$lang_err_104="FEHLER 104: Ungültiger Bausteinname";
+$lang_err_201="FEHLER 201: Baustein ist noch in Verwendung und darf nicht gelöscht werden!";
+$lang_err_202="FEHLER 202: Baustein konnte nicht gelöscht werden!";
+$lang_err_301="FEHLER 301: Bitte Baustein angeben!";
+$lang_err_302="FEHLER 302: Baustein ist bereits vorhanden!";
+$lang_err_303="FEHLER 303: Baustein kann nicht hochgeladen werden!";
+$lang_err_304="FEHLER 304: Es kann nur ein Datei vom Typ .html hochgeladen werden!";
+$lang_err_401="FEHLER 401: Bitte ein Logo angeben!";
+$lang_err_402="FEHLER 402: Zieldatei logo.gif kann nicht geschrieben werden!";
+$lang_err_403="FEHLER 403: Es kann nur ein Logo vom Dateitypen .gif hochgeladen werden!";

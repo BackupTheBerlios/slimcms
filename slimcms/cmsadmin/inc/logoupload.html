@@ -1,0 +1,63 @@
+<form method="post" action="###ADMIN_ACTION###" enctype="multipart/form-data">
+<table width="100%" cellspacing="2" cellpadding="2" border="0">
+  <tr>
+   <td class="normal">
+    <h4>###LANG_LOGO###</h4>
+   </td>
+  </tr>
+  <tr>
+   <td>&nbsp;<br>
+   </td>
+  </tr>
+</table>
+<table width="100%" cellspacing="2" cellpadding="2" border="0">
+ <tr>
+  <td class="normal" align="center">
+   ###LANG_FILE### (*.gif):&nbsp;&nbsp;&nbsp;
+   <input type="file" class="file" name="file" size="30" maxlength="80">
+  </td>
+</tr>
+</table>
+<br><br>
+<table border="0" cellspacing="2" cellpadding="2" width="100%">
+ <tr>
+  <td align="right" width="300">
+   <input type="hidden" name="cms_id" value="###CMS_ID###">
+   <input type="hidden" name="aktion" value="logo_hochladen">
+   <input type="submit" value="###LANG_UPLOAD_LOGO###" onclick="this.blur()">
+  </td>
+  <td width="200">
+   &nbsp;
+  </td>
+  <td align="left" width="300">
+   <input type="button" value="###LANG_BACK###" onclick="javascript:history.back();">
+  </td>
+ </tr>
+</table>
+<br>
+<table width="100%" cellspacing="2" cellpadding="2" border="0">
+  <tr>
+   <td class="normal">
+    <hr>
+    <h4>###LANG_ACTUAL_LOGO###</h4>
+   </td>
+  </tr>
+  <tr>
+   <td>&nbsp;<br>
+   </td>
+  </tr>
+  <tr>
+   <td align="center"><img src="###LOGO_PFAD###/cms_logo.gif" alt="" border="1">
+   </td>
+  </tr>
+</table>
+<br>
+<table>
+ <tr>
+  <td class="fehler" colspan="3">
+  <br>
+  ###FEHLER###
+  </td>
+ </tr>
+</table>
+</form>

@@ -1,0 +1,93 @@
+<form method="post" action="###ADMIN_ACTION###">
+<table width="100%" cellspacing="2" cellpadding="2" border="0">
+  <tr>
+   <td colspan="2" class="normal">
+     <h4>###LANG_MAINDATA###</h4>
+   </td>
+  </tr>
+  <tr>
+   <td class="normal">
+    ###LANG_NAME###
+   </td>
+   <td class="normal">
+    <input type="text" name="NAME" size=50 maxlength=100 value="###NAME###">
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2">
+   &nbsp;
+   </td>
+  </tr>
+  <tr>
+   <td class="normal">
+    ###LANG_TITLE###
+   </td>
+   <td>
+    <input type="text" name="TITEL" size=50 maxlength=100 value="###TITLE###">
+   </td>
+  </tr>
+  <tr>
+   <td class="normal">
+    ###LANG_SEARCHENGINES###
+   </td>
+   <td>
+    <input type="text" name="DESCRIPTION" size=50 maxlength=200 value="###DESCRIPTION###">
+   </td>
+  </tr>
+  <tr>
+   <td class="normal">
+    ###LANG_KEYWORDS###
+   </td>
+   <td>
+    <input type="text" name="KEYWORDS" size=50 maxlength=1000 value="###KEYWORDS###">
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2">
+   &nbsp;
+   </td>
+  </tr>
+  <tr>
+   <td class="normal">
+    ###LANG_FOOTER###
+   </td>
+   <td>
+    <input type="text" name="FUSSZEILE" size=75 maxlength=255 value="###FUSSZEILE###">
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2">
+   &nbsp;
+   </td>
+  </tr>
+  <tr>
+   <td class="normal">
+    ###LANG_LANGUAGE###
+   </td>
+   <td>
+    <select name="LANGUAGE">###LANGUAGE_SELECT###</select>
+   </td>
+  </tr>
+</table>
+<br><br>
+<table border="0" cellspacing="5" cellpadding="0" width="100%">
+ <tr>
+  <td align="right" width="300">
+   <input type="submit" value="###LANG_SAVE###" onclick="this.blur()">
+  </td>
+  <td width="200">
+   <input type="hidden" name="aktion" value="stammdaten_speichern">
+   <input type="hidden" name="cms_id" value="###CMS_ID###">
+  </td>
+  <td align="left" width="300">
+   <input type="button" value="###LANG_BACK###" onclick="javascript:history.back();">
+  </td>
+ </tr>
+ <tr>
+  <td class="fehler" colspan="3">
+  <br>
+  ###FEHLER###
+  </td>
+ </tr>
+</table>
+</form>

@@ -1,0 +1,34 @@
+# individual
+$startseite="index.shtml";
+$template_pfad_html="templates";
+$content_pfad_html="content";
+$own_pics_pfad_html="img";
+$admin_pfad_html="/cmsadmin";
+$robots="index,follow";
+
+# change sys_cms_id here for security here and also in /cmsadmin/index.shtml
+$sys_cms_id="change_me";
+
+# version
+$version="1.0 Beta";
+
+# generic
+$template_pfad_cgi="../../$template_pfad_html";
+$css_pfad_html="$template_pfad_html/$template_id/css";
+$img_pfad_html="$template_pfad_html/$template_id/img";
+$content_pfad_cgi="../../$content_pfad_html";
+$own_pics_pfad_cgi="../../$own_pics_pfad_html";
+$admin_pfad_cgi="../../$admin_pfad_html";
+@link="";
+$link[0]=$startseite;
+$link[1]="slim-cms1.shtml";
+$link[2]="slim-cms2.shtml";
+$link[3]="slim-cms3.shtml";
+$link[4]="slim-cms4.shtml";
+$link[5]="slim-cms5.shtml";
+$link[6]="slim-cms6.shtml";
+$link[7]="slim-cms7.shtml";
+$link[8]="slim-cms8.shtml";
+$link[9]="slim-cms9.shtml";
+#
+1;

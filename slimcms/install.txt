@@ -1,0 +1,62 @@
+# slim-CMS - an easy-to-use content management system
+# Copyright (C) 2004 Daniel Drees
+# For further information visit: http://www.slim-cms.com
+#
+# This program is free software; you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software Foundation;
+# either version 2 of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE. See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place,
+# Suite 330, Boston, MA 02111-1307 USA
+#
+# File Name: install.txt
+# $Author: ddrees $
+# $Date: 2004/10/16 19:32:13 $
+# $Revision: 1.1 $
+#
+
+INSTALLATION NOTES FOR SLIM-CMS
+===============================
+
+System requirements
+-------------------
+
+  - free cgi-bin directory
+  - approx. 1 MB free space in your webacount (slim-CMS (125k) and FCKeditor (785k))
+  - Perl 5.8+
+  - PHP 4.3+
+  - IE 6+, Netscape or Mozilla browser
+  - Javascript in your browser enabled (only for administration interface)
+
+1) Upload file to the root directory of your webaccount and unzip it
+
+2) Change file attributes:
+   755 /cgi-bin/cms/cms.cgi
+   755 /cgi-bin/cms/cms_print.cgi
+   755 /cgi-bin/cms/admin.cgi
+   666 /cgi-bin/cms/config/menu.var
+   666 /cgi-bin/cms/config/site.var
+   777 /img
+   777 /img/File
+   777 /img/Flash
+   777 /img/Image
+   777 /img/Media
+   777 /content
+
+3) set individual value for security in /cgi-bin/cms/config/cms.var
+   => $sys_cms_id="change_me";
+   => set this value also in /cmsadmin/index.shtml
+
+   The other variables should stay as is
+
+4) create .htaccess on /cmsadmin directory for security
+
+5) Type in Browser <your-domain>/cmsadmin
+
+6) Follow the instructions on startpage to build your website
+
