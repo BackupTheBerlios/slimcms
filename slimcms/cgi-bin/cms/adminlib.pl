@@ -16,8 +16,8 @@
 #
 # File Name: adminlib.pl
 # $Author: ddrees $
-# $Date: 2004/10/17 09:59:42 $
-# $Revision: 1.2 $
+# $Date: 2004/10/17 10:13:12 $
+# $Revision: 1.3 $
 #
 
 sub admin_template_laden {
@@ -50,6 +50,7 @@ sub admin_template_laden {
   }
 
   # translate
+  $admin_template =~s/###LANG_TITLE###/$lang_admintitle/;
   $admin_template =~s/###LANG_START###/$lang_start/;
   $admin_template =~s/###LANG_MAINDATA###/$lang_maindata/;
   $admin_template =~s/###LANG_BLOCKS###/$lang_blocks/;

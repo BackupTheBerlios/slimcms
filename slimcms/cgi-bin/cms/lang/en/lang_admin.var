@@ -16,8 +16,8 @@
 #
 # File Name: en/lang_admin.var
 # $Author: ddrees $
-# $Date: 2004/10/17 09:59:42 $
-# $Revision: 1.1 $
+# $Date: 2004/10/17 10:13:12 $
+# $Revision: 1.2 $
 #
 
 # Sprachen
@@ -25,6 +25,7 @@ $lang{'de'}="German";
 $lang{'en'}="English";
 
 # Texte Adminbereich
+$lang_admintitle="slim-CMS admin interface";
 $lang_start="Start";
 $lang_maindata="Main Data";
 $lang_blocks="Blocks";
