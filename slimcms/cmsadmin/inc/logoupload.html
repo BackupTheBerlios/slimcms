@@ -1,8 +1,7 @@
-<form method="post" action="###ADMIN_ACTION###" enctype="multipart/form-data">
 <table width="100%" cellspacing="2" cellpadding="2" border="0">
   <tr>
    <td class="normal">
-    <h4>###LANG_LOGO###</h4>
+    <h4>###LANG_UPLOAD_LOGO###</h4>
    </td>
   </tr>
   <tr>
@@ -10,6 +9,7 @@
    </td>
   </tr>
 </table>
+<form method="post" action="###ADMIN_ACTION###" enctype="multipart/form-data">
 <table width="100%" cellspacing="2" cellpadding="2" border="0">
  <tr>
   <td class="normal" align="center">
@@ -34,7 +34,7 @@
   </td>
  </tr>
 </table>
-<br>
+</form>
 <table width="100%" cellspacing="2" cellpadding="2" border="0">
   <tr>
    <td class="normal">
@@ -50,8 +50,22 @@
    <td align="center"><img src="###LOGO_PFAD###/cms_logo.gif" alt="" border="1">
    </td>
   </tr>
+  <tr>
+   <td>&nbsp;<br>
+   </td>
+  </tr>
 </table>
-<br>
+<form name="form_logo_anz" method="post" action="###ADMIN_ACTION###">
+<table width="100%" cellspacing="2" cellpadding="2" border="0">
+  <tr>
+   <td class="normal" align="center">
+   <input type="hidden" name="cms_id" value="###CMS_ID###">
+   <input type="hidden" name="aktion" value="logo_anzeige_speichern">
+   ###RADIO_BUTTONS###
+   </td>
+  </tr>
+</table>
+</form>
 <table>
  <tr>
   <td class="fehler" colspan="3">
@@ -60,4 +74,3 @@
   </td>
  </tr>
 </table>
-</form>

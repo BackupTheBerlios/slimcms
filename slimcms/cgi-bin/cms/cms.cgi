@@ -18,8 +18,8 @@
 #
 # File Name: cms.cgi
 # $Author: ddrees $
-# $Date: 2004/10/17 09:59:42 $
-# $Revision: 1.2 $
+# $Date: 2004/10/21 20:25:01 $
+# $Revision: 1.3 $
 #
 
 use strict;
@@ -152,6 +152,7 @@ sub standard_fuellen {
   our @rubrik;
   our $lang_last_update;
   our $lang_printerfriendly;
+  our $logo_name;
 
   $datei_inhalt=~s/###DESCRIPTION###/$description/;
   $datei_inhalt=~s/###KEYWORDS###/$keywords/;
@@ -167,6 +168,7 @@ sub standard_fuellen {
 
   $datei_inhalt=~s/###IMG_PFAD###/$img_pfad_html/g;
   $datei_inhalt=~s/###LOGO_PFAD###/$own_pics_pfad_html/;
+  $datei_inhalt=~s/###LOGO_NAME###/$logo_name/;
 
   my $print_link = "http:\/\/$host\/cgi-bin\/cms\/cms_print.cgi?rubrik=$aktuelle_rubrik";
   my $std_fuss = "<img src=\"$img_pfad_html/hp.gif\" width=\"14\" height=\"14\" border=\"0\" alt=\"\" align=\"middle\">&nbsp;<a href=\"http://www.slim-cms.com\" target=\"_blank\">slim-cms.com</a>&nbsp;&nbsp;&nbsp;<img src=\"$img_pfad_html/last_update.gif\" width=\"14\" height=\"14\" border=\"0\" alt=\"\" align=\"middle\">&nbsp;$lang_last_update:&nbsp;$letzte_aenderung&nbsp;&nbsp;&nbsp;<img src=\"$img_pfad_html/printerfriendly.gif\" width=\"14\" height=\"14\" border=\"0\" alt=\"\" align=\"middle\">&nbsp;<a href=\"$print_link\" target=\"_blank\">$lang_printerfriendly</a>";

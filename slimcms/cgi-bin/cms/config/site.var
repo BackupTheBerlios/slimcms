@@ -4,6 +4,7 @@ $description="slim-CMS";
 $keywords="slim-CMS";
 $fusszeile="";
 $language="en";
-$template_id=Default1;
+$template_id="Default1";
+$logo_name="cms_logo.gif";
 #
 1;

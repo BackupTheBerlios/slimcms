@@ -18,8 +18,8 @@
 #
 # File Name: admin.cgi
 # $Author: ddrees $
-# $Date: 2004/10/16 19:32:13 $
-# $Revision: 1.1 $
+# $Date: 2004/10/21 20:25:01 $
+# $Revision: 1.2 $
 #
 
 use CGI qw(:standard);
@@ -114,6 +114,10 @@ if ($cms_id eq $sys_cms_id) {
   }
   elsif ($aktion eq "logo_hochladen") {
     &logo_hochladen;
+    &logo_dialog_anzeigen;
+  }
+  elsif ($aktion eq "logo_anzeige_speichern") {
+    &logo_anzeige_speichern;
     &logo_dialog_anzeigen;
   }
   # HTML output

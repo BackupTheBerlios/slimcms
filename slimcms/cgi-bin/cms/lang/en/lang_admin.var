@@ -16,8 +16,8 @@
 #
 # File Name: en/lang_admin.var
 # $Author: ddrees $
-# $Date: 2004/10/17 10:13:12 $
-# $Revision: 1.2 $
+# $Date: 2004/10/21 20:25:01 $
+# $Revision: 1.3 $
 #
 
 # Sprachen
@@ -53,6 +53,9 @@ $lang_edit="edit";
 $lang_delete_block="Delete block";
 $lang_upload_logo="Upload logo";
 $lang_actual_logo="Actual logo";
+$lang_show_logo="Display the logo?";
+$lang_yes="yes";
+$lang_no="no";
 $lang_published="published under the";
 
 # Nachrichten

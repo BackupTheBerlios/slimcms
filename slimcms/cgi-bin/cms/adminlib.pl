@@ -16,8 +16,8 @@
 #
 # File Name: adminlib.pl
 # $Author: ddrees $
-# $Date: 2004/10/17 10:13:12 $
-# $Revision: 1.3 $
+# $Date: 2004/10/21 20:25:01 $
+# $Revision: 1.4 $
 #
 
 sub admin_template_laden {
@@ -71,7 +71,7 @@ sub adminstart_anzeigen {
 
   my $adminstart_inhalt = "";
 
-  # load template for admin-mask
+  # load admin template
   $datei_inhalt = &admin_template_laden(1);
 
   $adminstart_inhalt .= &datei_lesen("./lang/${language}/lang_adminstart.html");
@@ -92,7 +92,7 @@ sub stammdaten_anzeigen {
   my $select_html="";
   my @SPRACHEN ="";
 
-  # load template for admin-mask
+  # load admin template
   $datei_inhalt = &admin_template_laden(2);
 
   $stammdaten_inhalt .= &datei_lesen("$admin_pfad_cgi/inc/stammdaten.html");
@@ -168,7 +168,7 @@ sub menu_anzeigen {
   my @BAUSTEINE = ();
   my $zaehler=0;
 
-  # load template for admin-mask
+  # load admin template
   $datei_inhalt = &admin_template_laden(4);
 
   $rubriken_inhalt .= &datei_lesen("$admin_pfad_cgi/inc/menu.html");
@@ -348,7 +348,7 @@ sub contentpflege_auswahl {
   my $auswahl_html="";
   my @BAUSTEINE = ();
 
-  # load template for admin-mask
+  # load admin template
   $datei_inhalt = &admin_template_laden(3);
 
   $contentpflege_inhalt .= &datei_lesen("$admin_pfad_cgi/inc/contentpflege_auswahl.html");
@@ -475,7 +475,7 @@ sub content_anzeigen {
   my $contentpflegen_inhalt = "";
   my $content = "";
 
-  # load template for admin-mask
+  # load admin template
   $datei_inhalt = &admin_template_laden(3);
 
   $contentpflegen_inhalt .= &datei_lesen("$admin_pfad_cgi/inc/contentpflege.html");
@@ -525,7 +525,7 @@ sub layout_anzeigen {
   my $temp_radios = "";
   my @TEMPLATES = "";
 
-  # load template for admin-mask
+  # load admin template
   $datei_inhalt = &admin_template_laden(5);
 
   $layout_inhalt .= &datei_lesen("$admin_pfad_cgi/inc/layoutwaehlen.html");
@@ -574,7 +574,7 @@ sub layout_speichern {
   my $zieldatei="./config/site.var";
 
   tie @lines, 'Tie::File', $zieldatei;
-  $lines[6] = "\$template_id=$input{'TEMPLATE_ID'};";
+  $lines[6] = "\$template_id=\"$input{'TEMPLATE_ID'}\";";
   untie @lines;
 
 }
@@ -588,8 +588,9 @@ sub logo_dialog_anzeigen {
 
   my $admin_action = "http://$host/cgi-bin/cms/admin.cgi";
   my $logo_inhalt = "";
+  my $radio_html = "";
 
-  # Admintemplate laden
+  # load admin template
   $datei_inhalt = &admin_template_laden(6);
 
   $logo_inhalt .= &datei_lesen("$admin_pfad_cgi/inc/logoupload.html");
@@ -598,6 +599,15 @@ sub logo_dialog_anzeigen {
   $logo_inhalt=~s/###CMS_ID###/$sys_cms_id/g;
   $logo_inhalt=~s/###LOGO_PFAD###/$own_pics_pfad_cgi/g;
 
+  # build radio buttons
+
+  if ($logo_name eq "blank.gif") {
+  	$radio_html .= "$lang_show_logo&nbsp;&nbsp;$lang_yes<input type=\"radio\" name=\"LOGO_NAME\" value=\"cms_logo.gif\" onclick=\"javascript:document.form_logo_anz.submit();\">&nbsp;&nbsp;$lang_no<input type=\"radio\" name=\"LOGO_NAME\" value=\"blank.gif\" onclick=\"javascript:document.form_logo_anz.submit();\" checked>&nbsp;";
+  } else {
+  	$radio_html .= "$lang_show_logo&nbsp;&nbsp;$lang_yes<input type=\"radio\" name=\"LOGO_NAME\" value=\"cms_logo.gif\" onclick=\"javascript:document.form_logo_anz.submit();\" checked>&nbsp;&nbsp;$lang_no<input type=\"radio\" name=\"LOGO_NAME\" value=\"blank.gif\" onclick=\"javascript:document.form_logo_anz.submit();\">&nbsp;";
+  }
+  $logo_inhalt=~s/###RADIO_BUTTONS###/$radio_html/;
+  
   # translate
   $logo_inhalt=~s/###LANG_LOGO###/$lang_logo/g;
   $logo_inhalt=~s/###LANG_FILE###/$lang_file/g;
@@ -631,6 +641,18 @@ sub logo_hochladen {
       &nachricht($lang_err_403);
     }
   }
+
+}
+
+sub logo_anzeige_speichern {
+
+  use Tie::File;
+
+  my $zieldatei="./config/site.var";
+
+  tie @lines, 'Tie::File', $zieldatei;
+  $lines[7] = "\$logo_name=\"$input{'LOGO_NAME'}\";";
+  untie @lines;
 
 }
 
