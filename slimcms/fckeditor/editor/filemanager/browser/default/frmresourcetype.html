@@ -32,22 +32,24 @@ function SetResourceType( type )
 }
 
 var aTypes = [
-        ['File','File'],
         ['Image','Image'],
+        ['File','File'],
+        ['Media','Media'],
         ['Flash','Flash'],
-        ['Media','Media']
 ] ;
 
 window.onload = function()
 {
    var bHasType = ( oConnector.ResourceType.length > 0 ) ;
    cmbTypeObj=document.getElementById("cmbType");
+		
    for ( var i = 0 ; i < aTypes.length ; i++ )
    {
-       if ( !bHasType || aTypes[i][0] ==
-oConnector.ResourceType )
-           AddSelectOption( cmbTypeObj, aTypes[i][1],
-aTypes[i][0] ) ;
+       AddSelectOption( cmbTypeObj, aTypes[i][1],aTypes[i][0] ) ;
+       //if ( !bHasType || aTypes[i][0] == oConnector.ResourceType )
+       //{
+       //  AddSelectOption( cmbTypeObj, aTypes[i][1],aTypes[i][0] ) ;
+       //}
    }
 }
 

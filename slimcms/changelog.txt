@@ -1,5 +1,7 @@
 xx.xx.2004 - v0.9 
 - $template_id in site.var is saved with quotes(") (ddrees)
 - usage of logo is now optional (ddrees)
+- reduced width of URL field in fckeditor image browser
+- fixed Resource Types bug in fckeditor image browser
 
 16.10.2004 - Baseline
