@@ -1,0 +1,196 @@
+BODY{
+        Font-family: verdana, arial, sans-serif;
+        Font-size: 11px;
+        Font-weight: normal;
+        background-color: #DBDFE3;
+        margin-top: 5%;
+}
+
+/* Links */
+A:ACTIVE, A:LINK, A:VISITED
+{
+        Font-Family : verdana, arial, sans-serif;
+        color: #000000;
+        text-decoration: none;
+}
+
+A:HOVER
+{
+        Font-Family : verdana, arial, sans-serif;
+        color: #000000;
+        background-color: #DBDFE3;
+}
+
+.klein {
+        Font-family: verdana, arial, sans-serif;
+        Font-size: 10px;
+        Font-weight: normal;
+}
+
+h1
+  {
+    font-size:15pt;
+    font-weight:bold;
+  }
+
+h2
+  {
+    font-size:13pt;
+    font-weight:bold;
+    color: #ff6600;
+  }
+
+h3
+  {
+    font-size:11pt;
+    font-weight:bold;
+    color: #ff6600;
+  }
+
+caption
+  {
+    font-size:11pt;
+    font-weight:bold;
+    color: #ff6600;
+  }
+
+th
+  {
+    font-family:verdana, helvetica, arial, san-serif;
+    font-size:10pt;
+    font-weight:bold;
+  }
+
+
+TD {
+        Font-family: verdana, arial, sans-serif;
+        Font-size: 11px;
+        Font-weight: normal;
+        background: White;
+}
+
+TD.headertable {
+        Font-family: verdana, arial, sans-serif;
+        Font-size: 11px;
+        Font-weight: normal;
+        border-width: 2px 2px 0px 2px;
+        border-style: solid;
+        border-color: Black;
+        padding: 0px;
+        background: White;
+}
+
+TD.maintable {
+        Font-family: verdana, arial, sans-serif;
+        Font-size: 11px;
+        Font-weight: normal;
+        border-width: 0px 2px 2px 2px;
+        border-style: solid;
+        border-color: Black;
+        text-align: center;
+        padding: 0px;
+        background: White;
+}
+
+
+#active a:link, #active a:visited, #active a:hover
+{
+        border: 1px solid #333;
+        background-color: #FF6600;
+        color: #000;
+}
+
+
+#navcontainer
+{
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 40px;
+border-top: 1px solid #999;
+z-index: 1;
+}
+
+#navcontainer ul
+{
+list-style-type: none;
+text-align: center;
+margin-top: -8px;
+padding: 0;
+position: relative;
+z-index: 2;
+}
+
+#navcontainer li
+{
+display: inline;
+text-align: center;
+margin: 0 5px;
+}
+
+#navcontainer li a
+{
+padding: 1px 7px;
+color: #666;
+background-color: #fff;
+border: 2px solid #000000;
+text-decoration: none;
+}
+
+#navcontainer li a:hover
+{
+color: #000;
+background-color: #FF6600;
+border: 2px solid #000000;
+}
+
+#navcontainer li a#current
+{
+color: #000;
+border: 2px solid #000000;
+}
+
+#fusszeile
+{
+margin-left: auto;
+margin-right: auto;
+margin-bottom: -25px;
+border-top: 1px solid #999;
+z-index: 1;
+}
+
+#fusszeile ul
+{
+list-style-type: none;
+text-align: center;
+margin-top: -8px;
+padding: 0;
+position: relative;
+z-index: 2;
+}
+
+#fusszeile li
+{
+display: inline;
+text-align: center;
+margin: 0 5px;
+padding: 1px 7px;
+color: #000000;
+background-color: #FF6600;
+border: 2px solid #000000;
+text-decoration: none;
+}
+
+form
+  {
+    display: inline;
+  }
+
+.input
+  {
+    background-color: #f5f5f5;
+    color: #ff6600;
+    font-family: verdana, helvetica, arial, san-serif;
+    border: 1px solid #000000;
+    font-size: 11px;
+    padding: 2px;
+  }
