@@ -16,8 +16,8 @@
 #
 # File Name: adminlib.pl
 # $Author: ddrees $
-# $Date: 2004/10/16 19:32:13 $
-# $Revision: 1.1 $
+# $Date: 2004/10/17 09:59:42 $
+# $Revision: 1.2 $
 #
 
 sub admin_template_laden {
@@ -25,7 +25,7 @@ sub admin_template_laden {
   # personal site vars
   require "./config/site.var";
   # language file
-  require "./lang/${language}_admin.var";
+  require "./lang/${language}/lang_admin.var";
 
   my($menu_aktiv) = @_;
   my $admin_template = "";
@@ -66,14 +66,14 @@ sub adminstart_anzeigen {
   # personal site vars
   require "./config/site.var";
   # language file
-  require "./lang/${language}_admin.var";
+  require "./lang/${language}/lang_admin.var";
 
   my $adminstart_inhalt = "";
 
   # load template for admin-mask
   $datei_inhalt = &admin_template_laden(1);
 
-  $adminstart_inhalt .= &datei_lesen("./lang/${language}_adminstart.html");
+  $adminstart_inhalt .= &datei_lesen("./lang/${language}/lang_adminstart.html");
 
   $datei_inhalt =~s/###CONTENT###/$adminstart_inhalt/;
 
@@ -84,11 +84,12 @@ sub stammdaten_anzeigen {
   # personal site vars
   require "./config/site.var";
   # language file
-  require "./lang/${language}_admin.var";
+  require "./lang/${language}/lang_admin.var";
 
   my $admin_action = "http://$host/cgi-bin/cms/admin.cgi";
   my $stammdaten_inhalt = "";
   my $select_html="";
+  my @SPRACHEN ="";
 
   # load template for admin-mask
   $datei_inhalt = &admin_template_laden(2);
@@ -103,12 +104,13 @@ sub stammdaten_anzeigen {
   $stammdaten_inhalt=~s/###TITLE###/$title/;
   $stammdaten_inhalt=~s/###FUSSZEILE###/$fusszeile/;
 
-  if ($language eq "de") {
-    $select_html.="<option selected value=\"de\">$lang_german</option>";
-    $select_html.="<option value=\"en\">$lang_english</option>";
-  } else {
-    $select_html.="<option value=\"de\">$lang_german</option>";
-    $select_html.="<option selected value=\"en\">$lang_english</option>";
+  @SPRACHEN=&sprachen_ermitteln;
+  foreach my $sprache (@SPRACHEN) {
+    if ($language eq $sprache) {
+      $select_html.="<option selected value=\"$sprache\">$lang{$sprache}</option>";
+    } else {
+      $select_html.="<option value=\"$sprache\">$lang{$sprache}</option>";
+    }
   }
   $stammdaten_inhalt=~s/###LANGUAGE_SELECT###/$select_html/;
 
@@ -156,7 +158,7 @@ sub menu_anzeigen {
   # personal site vars
   require "./config/site.var";
   # language file
-  require "./lang/${language}_admin.var";
+  require "./lang/${language}/lang_admin.var";
 
   require "./config/menu.var";
 
@@ -239,7 +241,7 @@ sub menu_speichern {
   # personal site vars
   require "./config/site.var";
   # language file
-  require "./lang/${language}_admin.var";
+  require "./lang/${language}/lang_admin.var";
 
   my @tmp_rubrik_typ = ();
   my @tmp_rubrik = ();
@@ -338,7 +340,7 @@ sub contentpflege_auswahl {
   # personal site vars
   require "./config/site.var";
   # language file
-  require "./lang/${language}_admin.var";
+  require "./lang/${language}/lang_admin.var";
 
   my $contentpflege_inhalt = "";
   my $admin_action = "http://$host/cgi-bin/cms/admin.cgi";
@@ -382,7 +384,7 @@ sub baustein_erstellen {
   # personal site vars
   require "./config/site.var";
   # language file
-  require "./lang/${language}_admin.var";
+  require "./lang/${language}/lang_admin.var";
 
   my $bausteinname = $input{'neuer_baustein'};
   if ($bausteinname eq "") {
@@ -408,7 +410,7 @@ sub baustein_loeschen {
   # personal site vars
   require "./config/site.var";
   # language file
-  require "./lang/${language}_admin.var";
+  require "./lang/${language}/lang_admin.var";
 
   require "./config/menu.var";
 
@@ -437,7 +439,7 @@ sub baustein_hochladen {
   # personal site vars
   require "./config/site.var";
   # language file
-  require "./lang/${language}_admin.var";
+  require "./lang/${language}/lang_admin.var";
 
   if ($file eq "") {
     &nachricht($lang_err_301);
@@ -466,7 +468,7 @@ sub content_anzeigen {
   # personal site vars
   require "./config/site.var";
   # language file
-  require "./lang/${language}_admin.var";
+  require "./lang/${language}/lang_admin.var";
 
   my $admin_action = "http://$host/cgi-bin/cms/admin.cgi";
   my $contentpflegen_inhalt = "";
@@ -512,7 +514,7 @@ sub layout_anzeigen {
   # personal site vars
   require "./config/site.var";
   # language file
-  require "./lang/${language}_admin.var";
+  require "./lang/${language}/lang_admin.var";
 
   my $admin_action = "http://$host/cgi-bin/cms/admin.cgi";
   my $layout_inhalt = "";
@@ -581,7 +583,7 @@ sub logo_dialog_anzeigen {
   # personal site vars
   require "./config/site.var";
   # language file
-  require "./lang/${language}_admin.var";
+  require "./lang/${language}/lang_admin.var";
 
   my $admin_action = "http://$host/cgi-bin/cms/admin.cgi";
   my $logo_inhalt = "";
@@ -611,7 +613,7 @@ sub logo_hochladen {
   # personal site vars
   require "./config/site.var";
   # language file
-  require "./lang/${language}_admin.var";
+  require "./lang/${language}/lang_admin.var";
 
   if ($file eq "") {
     &nachricht($lang_err_401);

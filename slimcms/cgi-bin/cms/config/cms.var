@@ -10,7 +10,7 @@ $robots="index,follow";
 $sys_cms_id="change_me";
 
 # version
-$version="1.0 Beta";
+$version="0.9";
 
 # generic
 $template_pfad_cgi="../../$template_pfad_html";

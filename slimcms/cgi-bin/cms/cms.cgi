@@ -18,8 +18,8 @@
 #
 # File Name: cms.cgi
 # $Author: ddrees $
-# $Date: 2004/10/16 19:32:13 $
-# $Revision: 1.1 $
+# $Date: 2004/10/17 09:59:42 $
+# $Revision: 1.2 $
 #
 
 use strict;
@@ -40,7 +40,7 @@ require "./config/menu.var";
 require "./config/cms.var";
 # language file
 our $language;
-require "./lang/${language}_cms.var";
+require "./lang/${language}/lang_cms.var";
 
 # read parameter
 our $aktuelle_rubrik=param('rubrik');

@@ -14,11 +14,15 @@
 # this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place,
 # Suite 330, Boston, MA 02111-1307 USA
 #
-# File Name: de_admin.var
+# File Name: de/lang_admin.var
 # $Author: ddrees $
-# $Date: 2004/10/16 19:32:13 $
+# $Date: 2004/10/17 09:59:42 $
 # $Revision: 1.1 $
 #
+
+# Sprachen
+$lang{'de'}="Deutsch";
+$lang{'en'}="Englisch";
 
 # Texte Adminbereich
 $lang_start="Start";
@@ -33,8 +37,6 @@ $lang_searchengines="Beschreibung für Suchmaschinen";
 $lang_keywords="Stichwörter für Suchmaschinen";
 $lang_footer="Fußzeile";
 $lang_language="Sprache";
-$lang_german="Deutsch";
-$lang_english="Englisch";
 $lang_save="Speichern";
 $lang_back="Zurück";
 $lang_block="Baustein";

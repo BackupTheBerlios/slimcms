@@ -16,8 +16,8 @@
 #
 # File Name: stdlib.pl
 # $Author: ddrees $
-# $Date: 2004/10/16 19:32:13 $
-# $Revision: 1.1 $
+# $Date: 2004/10/17 09:59:42 $
+# $Revision: 1.2 $
 #
 
 sub datei_lesen {
@@ -102,6 +102,23 @@ sub templates_ermitteln {
   closedir(DIR);
   my @TEMPLATESSORTIERT = sort(@TEMPLATES);
   return @TEMPLATESSORTIERT;
+
+}
+
+sub sprachen_ermitteln {
+
+  @SPRACHEN = ();
+  my $pfad = "./lang";
+  
+  opendir(DIR,$pfad);
+  for my $datei (readdir DIR) {
+    if ($datei ne "." && $datei ne "..") {
+      push(@SPRACHEN, $datei) if -d $pfad."/".$datei;
+    }
+  }
+  closedir(DIR);
+  my @SPRACHENSORTIERT = sort(@SPRACHEN);
+  return @SPRACHENSORTIERT;
 
 }
 
