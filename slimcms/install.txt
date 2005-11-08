@@ -16,8 +16,8 @@
 #
 # File Name: install.txt
 # $Author: ddrees $
-# $Date: 2005/11/07 21:40:51 $
-# $Revision: 1.2 $
+# $Date: 2005/11/08 20:01:42 $
+# $Revision: 1.3 $
 #
 
 INSTALLATION NOTES FOR SLIM-CMS
@@ -27,9 +27,8 @@ System requirements
 -------------------
 
   - free cgi-bin directory
-  - approx. 1 MB free space in your webacount (slim-CMS (125k) and FCKeditor (785k))
+  - approx. 2 MB free space in your webacount (slim-CMS (125k) and FCKeditor (2117k))
   - Perl 5.8+ installed in /usr/bin
-  - PHP 4.3+
   - IE 6+, Netscape or Mozilla browser
   - Javascript in your browser enabled (only for administration interface)
 
